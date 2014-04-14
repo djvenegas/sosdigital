@@ -1,0 +1,20 @@
+@import "mixins.scss";
+@import "normalize.css";
+$blanco:#ffffff;
+$negro:#000000;
+body{
+	background:$blanco;
+}
+.clear{
+	clear: both;
+}
+.wrapper, .content, .center{
+	margin: 0 auto;
+	position:relative;
+}
+section .wrapper{
+	width: 1024px;
+}
+section .content{
+	max-width: 1600px;
+}
