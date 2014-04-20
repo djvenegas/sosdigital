@@ -31,13 +31,26 @@
    <link rel="shortcut icon" href="{DIR}img/{FAVICON}" type="image/ico">
    <script src="{DIR}js/libs/CreateHTML5Elements.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   <script src="{DIR}js/cycle/jquery.cycle.all.js"></script>
+   <script src="{DIR}js/cycle/jquery.cycle2.min.js"></script>
+   <script src="{DIR}js/cycle/jquery.cycle2.carousel.min.js"></script>
+   <script src="{DIR}js/cycle/jquery.cycle2.swipe.min.js"></script>
+   <script src="{DIR}js/cycle/jquery.cycle2.video.min.js"></script>
+   <script src="{DIR}js/jquery.scrolldeck.js"></script>
+   <script src="{DIR}js/jquery.scrollTo-1.4.3.1.min.js"></script>
+   <script src="{DIR}js/jquery.scrollorama.js"></script>
 </head>
 <body>
    <input type="hidden" value="{DIR}"/>
-   <header id="header" class="">
-      {FAVICON}
+  <div class="content">
+   <header class="header">
+      <nav class="menu">
+         {MENU}
+      </nav>
    </header><!-- /header -->
-   <section class="content">{CONTENT}</section>
+   </div>
+   {CONTENT}
    <footer>
       
    </footer>

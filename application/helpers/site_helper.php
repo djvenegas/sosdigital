@@ -16,6 +16,17 @@ if ( ! function_exists('site'))
 		$data['FAVICON'] = $CI->site_model->getfavicon();
 		$data['ANALYTICS'] = $CI->site_model->getanalytics();
 		$data['CONTENT'] = $CI->parser->parse($section, $data_objects, true);
+		$data['MENU'] = menu($s);
 		$CI->parser->parse('site', $data);
+	}
+	function menu($s) {
+		$menu ='<ul>';
+		$menu .= '<li class="'.($s=='inicio'? ' activate':'').'"><a href="'.base_url().'" >SOS</a><span></span></li>';
+		$menu .= '<li><a href="'.base_url().'rescatistas" class="'.($s=='rescatistas'? ' activate':'').'">Rescatistas</a><span></span></li>';
+		$menu .= '<li><a href="'.base_url().'servicios" class="'.($s=='servicios'? ' activate':'').'">Servicios</a><span></span></li>';
+		$menu .= '<li><a href="'.base_url().'marcas" class="'.($s=='marcas'? ' activate':'').'">Marcas Salvadas</a><span></span></li>';
+		$menu .= '<li><a href="'.base_url().'contacto" class="'.($s=='contacto'? ' activate':'').'">Llamada de Auxilio</a><span></span></li>';
+		$menu .= '</ul>';
+		return $menu;
 	}
 }
