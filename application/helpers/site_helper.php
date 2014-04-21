@@ -21,11 +21,11 @@ if ( ! function_exists('site'))
 	}
 	function menu($s) {
 		$menu ='<ul>';
-		$menu .= '<li class="'.($s=='inicio'? ' activate':'').'"><a href="'.base_url().'" >SOS</a><span></span></li>';
-		$menu .= '<li><a href="'.base_url().'rescatistas" class="'.($s=='rescatistas'? ' activate':'').'">Rescatistas</a><span></span></li>';
-		$menu .= '<li><a href="'.base_url().'servicios" class="'.($s=='servicios'? ' activate':'').'">Servicios</a><span></span></li>';
-		$menu .= '<li><a href="'.base_url().'marcas" class="'.($s=='marcas'? ' activate':'').'">Marcas Salvadas</a><span></span></li>';
-		$menu .= '<li><a href="'.base_url().'contacto" class="'.($s=='contacto'? ' activate':'').'">Llamada de Auxilio</a><span></span></li>';
+		$menu .= '<li><a href="#home" class="nav-button" >SOS</a><span></span></li>';
+		$menu .= '<li><a href="#servicios" class="nav-button">Rescatistas</a><span></span></li>';
+		$menu .= '<li><a href="#" class="nav-button">Servicios</a><span></span></li>';
+		$menu .= '<li><a href="#" class="nav-button">Marcas Salvadas</a><span></span></li>';
+		$menu .= '<li><a href="#" class="nav-button">Llamada de Auxilio</a><span></span></li>';
 		$menu .= '</ul>';
 		return $menu;
 	}

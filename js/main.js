@@ -1,18 +1,22 @@
   $(document).ready(function() {
-    $('.cycle-slideshow').on('cycle-after', function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
-      $('.label > h1').show('drop', {
+  	var deck = new $.scrolldeck({
+    buttons: '.nav-button',
+    duration: 600,
+    easing: 'easeInOutExpo',
+	offset: 0
+  });
+if ($('html,body').position().top >=800){
+alert("mayor a 800");
+}
+
+    $('.slide-banner').on('cycle-after', function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+      $('.label > img').show('drop', {
         direction: 'up'
-      }, 450);
-      return $('.label > h2').show('drop', {
-        direction: 'down'
       }, 450);
     });
-    $('.cycle-slideshow').on('cycle-before', function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
-      $('.label > h1').hide('drop', {
+    $('.slide-banner').on('cycle-before', function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+      $('.label > img').hide('drop', {
         direction: 'up'
-      }, 450);
-      return $('.label > h2').hide('drop', {
-        direction: 'down'
       }, 450);
     });
 });
