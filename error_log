@@ -350,3 +350,10 @@
 [10-Feb-2014 13:38:54 America/Denver] PHP Fatal error:  Class 'CI_Controller' not found in /home3/interap2/public_html/indalezzia/tmp/system/core/CodeIgniter.php on line 233
 [10-Feb-2014 13:38:55 America/Denver] PHP Fatal error:  Class 'CI_Controller' not found in /home3/interap2/public_html/indalezzia/tmp/system/core/CodeIgniter.php on line 233
 [10-Feb-2014 13:39:01 America/Denver] PHP Fatal error:  Class 'CI_Controller' not found in /home3/interap2/public_html/indalezzia/tmp/system/core/CodeIgniter.php on line 233
+[14-Apr-2014 01:23:38 UTC] PHP Fatal error:  Class 'CI_Controller' not found in /home/sosdi/public_html/inicio/system/core/CodeIgniter.php on line 233
+[19-Apr-2014 03:51:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/sosdi/public_html/inicio/application/helpers/site_helper.php on line 27
+[19-Apr-2014 03:52:17 UTC] PHP Fatal error:  Using $this when not in object context in /home/sosdi/public_html/inicio/application/helpers/site_helper.php on line 19
+[19-Apr-2014 03:52:34 UTC] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/sosdi/public_html/inicio/application/helpers/site_helper.php on line 19
+[19-Apr-2014 03:56:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/sosdi/public_html/inicio/application/helpers/site_helper.php on line 27
+[19-Apr-2014 04:01:07 UTC] PHP Parse error:  syntax error, unexpected T_RETURN in /home/sosdi/public_html/inicio/application/helpers/site_helper.php on line 30
+[20-Apr-2014 21:28:50 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sosdi/public_html/inicio/application/views/inicio.php on line 1

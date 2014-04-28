@@ -135,7 +135,7 @@ blockquote {
 #download a { color: #69697A; }
 
 #examples-1 { overflow: hidden; }
-#fly-it { position: relative; }
+.fly-it { position: relative; }
 #scale-it { width: 500%; margin: 0px -200%; padding: 0; }
 
 #examples-pin { position: relative; width: 100%; height: 600px; overflow: hidden; margin-bottom: -200px; }
