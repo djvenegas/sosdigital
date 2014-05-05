@@ -1,5 +1,5 @@
 <section id="home" class="content home">
-	<article class="wrapper">
+	<article class="wrapper margin-top">
 		<figure class="logo">
 			<img src="{DIR}img/logo.png" alt="Logo">
 		</figure>

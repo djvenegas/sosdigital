@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost'; // for pdo: mysql:host=localhost
-$db['default']['username'] = 'sosdi_dbuser';
+$db['default']['username'] = 'sosdigi1_dbuser';
 $db['default']['password'] = '$!o?)ClITr{J';
-$db['default']['database'] = 'sosdi_db_home';
+$db['default']['database'] = 'sosdigi1_db_home';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

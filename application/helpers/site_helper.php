@@ -24,8 +24,8 @@ if ( ! function_exists('site'))
 		$menu .= '<li><a href="#home" class="nav-button" >SOS</a><span></span></li>';
 		$menu .= '<li><a href="#rescatistas" class="nav-button">Rescatistas</a><span></span></li>';
 		$menu .= '<li><a href="#servicios" class="nav-button">Servicios</a><span></span></li>';
-		$menu .= '<li><a href="#" class="nav-button">Marcas Salvadas</a><span></span></li>';
-		$menu .= '<li><a href="#" class="nav-button">Llamada de Auxilio</a><span></span></li>';
+		$menu .= '<li><a href="#marcas" class="nav-button">Marcas Salvadas</a><span></span></li>';
+		$menu .= '<li><a href="#contacto" class="nav-button">Llamada de Auxilio</a><span></span></li>';
 		$menu .= '</ul>';
 		return $menu;
 	}

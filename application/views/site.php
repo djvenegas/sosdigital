@@ -28,7 +28,7 @@
    <meta property="og:image" content="{IMAGE_SITE}">
    <meta property="og:url" content="{DIR}">
    <link rel="stylesheet" href="{DIR}css/main.css" type="text/css">
-   <link rel="shortcut icon" href="{DIR}img/{FAVICON}" type="image/ico">
+   <link rel="shortcut icon" href="{DIR}media/images/{FAVICON}" type="image/ico">
    <script src="{DIR}js/libs/CreateHTML5Elements.js"></script>
    <script src="{DIR}js/jquery-1.8.2.min.js"></script>
    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -43,8 +43,9 @@
    </header><!-- /header -->
    </div>
    {CONTENT}
-   <footer>
-      
+   <footer class="wrapper container footer-content">
+     <p>Copyrigth © 2014 SOS Digital. Todos los derechos reservados. Contacto rescate@sosdigital.mx (01) 477 4771739148 (01) 477 4777272039 León. Gto.  </p>
+     <div>face</div>   
    </footer>
    <script src="{DIR}js/jquery.scrollTo-1.4.3.1.min.js"></script>
    <script src="{DIR}js/jquery.easing.1.3.js"></script>

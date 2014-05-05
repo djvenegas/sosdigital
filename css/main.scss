@@ -1,14 +1,21 @@
 @import "mixins.scss";
 @import "normalize.css";
+@import "font-awesome.min.css";
 $blanco:#ffffff;
 $negro:#000000;
 $verde:#118a83;
 $verde-2:#06bab4;
+$verde-3:#0b6360;
 $amarillo:#f6b018;
 $amarillo-2:#d59a15;
 $amarillo-3:#fec20e;
 $amarillo-ser:#7f6107;
+$amarillo-res:#ffd200;
 $gris:#a3a3a4;
+$gris1:#262626;
+$gris2:#797979;
+$gris3:#333130;
+$azul:#0279d4;
 body{
 	background:$blanco;
 	font-size:1em;
@@ -24,6 +31,9 @@ iframe, object, embed {
 width: 100%;
 height: 100%;
 }
+.margin-top{
+	padding-top:37px;
+}
 .pr { position: relative; }
 .or-block {
 	display: block;
@@ -32,8 +42,28 @@ height: 100%;
 	padding:100px 0 0 0!important; 
 	text-align:center;
 }
+.servicios, .rescatistas, .marcas{
+	overflow:hidden;
+}
 .servicios{
 	background:$amarillo-3;
+}
+.marcas{
+	background:$blanco;
+}
+.titulomarcas{
+	color:$verde-2;
+}
+.rescatistas{
+	background:$verde;
+	color:$blanco;
+}
+.conctacto{
+	background:url('../img/contacto/fondo.jpg') no-repeat 50% 100%;
+	color:$blanco;
+}
+.text-rescatista{
+	font-style:italic;
 }
 .clear{
 	clear: both;
@@ -44,7 +74,6 @@ height: 100%;
 }
 .wrapper{
 	width: 1024px;
-	margin-top:37px;
 }
 .content{
 	max-width: 1600px;
@@ -113,8 +142,25 @@ height: 100%;
 	display:inline-block;
 	@include transition(all, .3s, ease-in-out);
 }
+.red1{
+	width:51px;
+	height:46px;
+	margin-left:10px;
+	display:inline-block;
+	@include transition(all, .3s, ease-in-out);
+}
 .red:hover{
 	background-position:bottom;
+}
+.print1{
+	background:url('../img/redes-sprite1.png') top left;
+}
+.face1{
+	background:url('../img/redes-sprite1.png') -55px 0px;
+}
+.twitter1{
+	background:url('../img/redes-sprite1.png') top right;
+	width:53px;
 }
 .print{
 	background:url('../img/redes-sprite.png') top left;
@@ -125,7 +171,8 @@ height: 100%;
 .twitter{
 	background:url('../img/redes-sprite.png') top right;
 	width:43px;
-}.print:hover{
+}
+.print:hover{
 	background-position:bottom left;
 }
 .face:hover{
@@ -134,8 +181,66 @@ height: 100%;
 .twitter:hover{
 	background-position:bottom right;
 }
+.print1:hover{
+	background-position:bottom left;
+}
+.face1:hover{
+	background-position:-55px 46px;
+}
+.twitter1:hover{
+	background-position:bottom right;
+}
 .container{
 	position:relative;
+}
+.marca-slide{
+	height:506px;
+	width:1024px;
+}
+.marcas-slide{
+	height:506px;
+	width:1024px;
+	& figure{
+	  	margin: 0;
+		display: inline-block;
+		padding: 0;
+		width: 253px;
+		height: 253px;
+		position: relative;
+
+		& img{
+			  border: 0;
+			  width: 102%;
+			  height: auto;
+			  position: absolute;
+		}
+		& figcaption{
+			@include transition(all, .3s, ease-in-out);
+			@include opacity(0);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background:rgba(0, 0, 0,.7);
+			width: 102%;
+      		height: 257px;
+      		text-align: center;
+      		
+			& p{
+				color: $amarillo;
+				font-size: 1.5em;
+		        padding: 0 30px;
+		        text-align: center;
+			}
+			& a{
+				color: $verde-3;
+				font-size: 1.5em;
+        		padding: 0 30px;
+			}	
+		}
+		&:hover figcaption{
+			@include opacity(100);
+		}
+	}
 }
 .slide-banner{
 	width:100%;
@@ -148,7 +253,39 @@ height: 100%;
 .slide-text{
 	width:504px;
 	height:50px;
-	margin: 0 260px;
+	margin: 37px 260px;
+}
+.slide-text-mar{
+	width: 750px;
+  	height: 140px;
+ 	margin: 37px 141px;
+ 	&>div{
+ 		width: 750px;
+  		height: 140px;
+  		text-align: right;
+  		color: $gris1;
+  		& p{
+  			text-align: center;
+  			margin: 20px;
+  			font-style: italic;
+  		}
+  		& span{
+  			margin: 0 20px;
+  			color: $negro;
+  		}
+ 	}
+}
+.slide-text-footer{
+	width: 725px;
+  	height: 140px;
+ 	margin: 37px;
+ 	color: $blanco;
+ 	&>article{
+ 		width: 725px;
+  		height: 140px;
+  		text-align: right;
+  		
+ 	}
 }
 .slide-text>div{
 	width:504px;
@@ -190,6 +327,20 @@ height: 100%;
 	@include opacity(0.5);
 	cursor: pointer;
 }
+.btn-cont{
+	position:absolute;
+	top:44px;
+	z-index:100;
+	//@include opacity(0.5);
+	cursor: pointer;
+}
+.btn-mar{
+	position:absolute;
+	top:29px;
+	z-index:100;
+	@include opacity(0.5);
+	cursor: pointer;
+}
 .prev{
 	border-right: 34px solid $blanco;
 	border-top: 40px solid transparent;
@@ -201,6 +352,30 @@ height: 100%;
 	border-top: 40px solid transparent;
 	border-bottom: 40px solid transparent; 
 	right:20px;
+}
+.prev-mar{
+	border-right: 24px solid $gris1;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 
+	left:90px;
+}
+.next-mar{
+	border-left: 24px solid $gris1;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 
+	right:90px;
+}
+.prev-cont{
+	border-right: 24px solid $gris3;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 
+	left:10px;
+}
+.next-cont{
+	border-left: 24px solid $gris3;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 
+	right:230px;
 }
 .bullet{
 	width:1em;
@@ -234,10 +409,38 @@ height: 100%;
 		}
 	}
 }
+.rescatista-btn{
+	display:inline-block;
+	margin:0;
+	position:relative;
+	&>figcaption{
+		height: 108px;
+		&>.title-btn{
+			display: block;
+			font-size: 1.2em;
+			font-weight: 900;
+			margin-top: 20px;
+			color: $amarillo-res;
+		}
+		&>.subtitle-btn{
+			display: block;
+			font-size: 1em;
+			font-weight: 900;
+		}
+	}
+}
 .ser{
 	width:234px;
 	height:240px;
 	display:inline-block;
+}
+.res{
+	position:absolute;
+	top:0;
+	left:0;
+	width:327px;
+	height:327px;
+	
 }
 .ser-btn1{
 	background:url('../img/servicios/btn1.png') no-repeat;
@@ -258,6 +461,27 @@ height: 100%;
 	@include transition(all, .5s, ease-in-out);
 	&:hover{
 		background:url('../img/servicios/btn3-hover.png') no-repeat;
+	}
+}
+.res-btn1{
+	background:url('../img/rescatistas/foto-1.png') no-repeat;
+	@include transition(all, .5s, ease-in-out);
+	&:hover{
+		background:url('../img/rescatistas/over1.png') no-repeat;
+	}
+}
+.res-btn2{
+	background:url('../img/rescatistas/foto-2.png') no-repeat;
+	@include transition(all, .5s, ease-in-out);
+	&:hover{
+		background:url('../img/rescatistas/over2.png') no-repeat;
+	}
+}
+.res-btn3{
+	background:url('../img/rescatistas/foto-3.png') no-repeat;
+	@include transition(all, .5s, ease-in-out);
+	&:hover{
+		background:url('../img/rescatistas/over3.png') no-repeat;
 	}
 }
 .over-text{
@@ -283,4 +507,148 @@ height: 100%;
 			text-align: center
 		}
 	}
+}
+.frm-con{
+	@include border-radius(25px);
+	@include box-shadow(2px, 2px, 5px, rgba(0,0,0,.4));
+	border:none;
+	background:rgba(255,255,255,.6);
+	position:relative;
+	text-align:left;
+	padding:50px 30px 30px 30px;
+	&>form>div{
+		display: inline-block;
+		position:relative;
+		margin: 0 0 5px 0;
+		& span{
+			position:absolute;
+			z-index: 2;
+			color: $gris2;
+			width: 85px;
+			top:3px;
+			font-size: .8em;
+			font-style: italic;
+			text-align: left;
+			left: 2px;
+		}
+		& input[type="text"]{
+			@include border-radius(7px);
+			background:$blanco;
+			display: inline-block;
+			position:relative;
+			z-index: 1;
+			padding:0 0 0 76px;
+			width: 167px;
+			color: $gris2;
+			height: 25px;
+			border:none;
+		}
+	}
+	& input[type="button"]{
+		border:none;
+		background:$gris2;
+		position: absolute;
+		right: 32px;
+	}
+	&>div{
+		margin: 50px 0 20px 0;
+		color: $negro;
+		text-align: center;
+		& span{
+			color: $azul;
+		}
+	}
+}
+div.frm-texto{
+	width:711px;
+	position:absolute!important;
+	top:50px;
+	right:30px;
+	z-index: 3;
+	& textarea{
+		@include border-radius(7px);
+		background:$blanco;
+		width: 89%;
+		color: $gris2;
+		height: 85px;
+		padding:0 0 0 76px;
+		border:none;
+
+	}
+}
+.twitter-cont{
+	display:inline-block;
+}
+.redes-cont{
+	display:inline-block;
+	vertical-align:top;
+	margin:20px 10px;
+}
+.letras-cont{
+  background: url("../img/contacto/letras.png") no-repeat 50%;
+  width: 860px;
+  height: 683px; 
+  display: block;
+  /* z-index: 2; */
+  position: absolute;
+  top: 0;
+}
+.footer-content{
+	& p{
+		font-size: .7em;
+		display: inline-block
+	}
+	& div{
+		display: inline-block;
+	}
+}
+
+#timeline article {
+	padding: 13px 0 13px;
+	
+}
+
+#timeline header {
+	padding-bottom: 5px;
+}
+
+#timeline .nombre,
+#timeline .nombre a,
+#timeline .nombre a:hover {
+	color: $amarillo-res;
+	text-decoration: none;
+}
+
+#timeline .usuario,
+#timeline .usuario a,
+#timeline .usuario a:hover{
+	color: $amarillo-res;
+	text-decoration: none;
+}
+
+#timeline time {
+	color: $blanco;
+	font-size: 0.85em;
+}
+
+#timeline .nRTs,
+#timeline .nFav {
+	float: right;
+	font-size: 0.85em;
+	color: #0c304a;
+}
+
+#timeline p {
+	font-weight: 400;
+	color: $blanco;
+	line-height: 1.3;
+}
+
+#timeline a {
+	color: $amarillo-res;
+	text-decoration: underline;
+}
+
+#timeline a:hover {	
+	text-decoration: none;	
 }
